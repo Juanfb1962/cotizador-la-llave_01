@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1F3A5F">
+  <title>Cotiza tu Kit anti lluvias | Ferretería La Llave</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado-interior">
+      <a class="marca" href="#inicio" aria-label="Ferretería La Llave, ir al inicio">
+        <span class="marca-icono" aria-hidden="true">LL</span>
+        <span>Ferretería <strong>La Llave</strong></span>
+      </a>
+      <span class="zona">Los Olivos · Lima</span>
+    </div>
+  </header>
+  <main class="contenedor" id="inicio">
+    <section class="presentacion" aria-labelledby="titulo">
+      <p class="etiqueta">PREPÁRATE PARA LA TEMPORADA</p>
+      <h1 id="titulo">Cotiza tu Kit anti lluvias</h1>
+      <p class="subtitulo">Cotiza tu Kit anti lluvias en segundos</p>
+      <p class="introduccion">Cuéntanos cómo es tu techo y te ayudamos a calcular los materiales que necesitas.</p>
+    </section>
+    <div class="paneles">
+      <section class="tarjeta formulario-tarjeta" aria-labelledby="formulario-titulo">
+        <div class="titulo-seccion">
+          <span class="numero-seccion" aria-hidden="true">1</span>
+          <div><h2 id="formulario-titulo">Cuéntanos de tu techo</h2><p>Completa los datos para calcular tu kit.</p></div>
+        </div>
+        <form id="formulario-cotizacion" novalidate>
+          <div class="campo">
+            <label for="area-techo">¿Cuántos metros cuadrados tiene?</label>
+            <div class="entrada-con-unidad"><input id="area-techo" name="area-techo" type="text" inputmode="decimal" placeholder="Ejemplo: 35" autocomplete="off" aria-describedby="ayuda-area error-area" required><span class="unidad">m²</span></div>
+            <span class="ayuda" id="ayuda-area">Puedes usar punto o coma para los decimales.</span>
+            <span class="error" id="error-area" role="alert" hidden>Ingresa los metros de tu techo</span>
+          </div>
+          <fieldset class="campo grupo-techo">
+            <legend>¿Qué tipo de techo tienes?</legend>
+            <div class="opciones-techo">
+              <label class="opcion-techo"><input type="radio" name="tipo-techo" value="concreto" checked><span class="opcion-contenido"><span class="opcion-icono" aria-hidden="true">▰</span><span><strong>Concreto</strong><small>Techo de material noble</small></span><span class="radio-indicador" aria-hidden="true"></span></span></label>
+              <label class="opcion-techo"><input type="radio" name="tipo-techo" value="calamina"><span class="opcion-contenido"><span class="opcion-icono calamina-icono" aria-hidden="true">▤</span><span><strong>Calamina</strong><small>Techo de planchas</small></span><span class="radio-indicador" aria-hidden="true"></span></span></label>
+            </div>
+          </fieldset>
+          <div class="campo">
+            <label for="metros-canaleta">¿Necesitas canaleta?</label>
+            <div class="entrada-con-unidad"><input id="metros-canaleta" name="metros-canaleta" type="text" inputmode="decimal" placeholder="Déjalo vacío si no necesitas" autocomplete="off"><span class="unidad">metros</span></div>
+            <span class="ayuda">Opcional: indica los metros lineales que necesitas.</span>
+          </div>
+          <button class="boton boton-principal" type="submit">Calcular mi kit <span aria-hidden="true">→</span></button>
+        </form>
+      </section>
+      <section class="tarjeta resultado-tarjeta" id="resultado" aria-labelledby="resultado-titulo" aria-live="polite" hidden>
+        <div class="titulo-seccion resultado-encabezado"><span class="numero-seccion numero-amarillo" aria-hidden="true">2</span><div><h2 id="resultado-titulo">Tu kit recomendado</h2><p id="detalle-techo"></p></div></div>
+        <div class="tabla-contenedor"><table><thead><tr><th scope="col">Producto</th><th scope="col">Cantidad</th><th scope="col">P. unitario</th><th scope="col">Subtotal</th></tr></thead><tbody id="filas-productos"></tbody></table></div>
+        <div class="total-fila"><span>Total referencial</span><strong id="total-cotizacion">S/ 0.00</strong></div>
+        <p class="aviso-precio"><span aria-hidden="true">ⓘ</span> Precios referenciales de ejemplo. Confirma stock y precio final por WhatsApp.</p>
+        <a class="boton boton-whatsapp" id="enlace-whatsapp" href="#" target="_blank" rel="noopener noreferrer"><span class="icono-whatsapp" aria-hidden="true">↗</span> Pedir por WhatsApp</a>
+      </section>
+    </div>
+    <p class="nota-confianza"><span aria-hidden="true">✓</span> Rápido, sencillo y sin compromiso.</p>
+  </main>
+  <footer class="pie-pagina"><div class="contenedor pie-interior"><span>Ferretería La Llave · Los Olivos, Lima</span><span>Proyecto académico</span></div></footer>
+</body>
+</html>
